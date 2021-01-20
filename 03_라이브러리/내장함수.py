@@ -11,4 +11,4 @@ print(max(result))
 print(eval(str))
 
 # sorted() 함수 보다는 iterable 객체에 내장된 sort() 함수를 사용함
-# 이 경우 바로 내부 값이 변경됨s
+# 이 경우 바로 내부 값이 변경됨
