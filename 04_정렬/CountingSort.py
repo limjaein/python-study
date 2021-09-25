@@ -1,14 +1,16 @@
-numbers = []
-length = 100
+numbers = [1, 0, 3, 2, 4, 3, 2, 2, 1, 1, 1, 1, 5, 3, 3, 4, 5]
+k = 5
+counts = []
+result = []
 
-for i in range(length, 0, -1):
-    numbers.append(i)
+length = len(numbers)
+counts = [0] * length
 
-for idx, num in enumerate(numbers):
-    min_idx = idx
-    for n_idx in range(idx + 1, length):
-        if numbers[n_idx] < numbers[min_idx]:
-            min_idx = n_idx
-    numbers[idx], numbers[min_idx] = numbers[min_idx], numbers[idx]
+for num in numbers:
+    counts[num] += 1
 
-print(numbers)
+for num, cnt in enumerate(counts):
+    for _ in range(cnt):
+        result.append(num)
+
+print(result)
